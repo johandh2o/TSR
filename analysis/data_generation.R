@@ -46,7 +46,8 @@ fun.R = function(m, z, u){
   return(as.numeric(lo>0))
 }
 
-# Generate data
+# ------------------------------
+# Generate data function
 generate_data = function(N = 1e4,        # sample size
                          used_seed = 77, # seed
                          coefA = c(0.00, 0.90, -0.09),
@@ -107,6 +108,7 @@ generate_data = function(N = 1e4,        # sample size
     return(full.data)
 }
 
+# ------------------------------
 # Save data
 gen_data = generate_data()
 saveRDS(gen_data, file = "gen_data.rds")
